@@ -87,6 +87,10 @@ extern s32 sDelayedWarpArg;
 extern u8 unused4[2];
 extern s8 sTimerRunning;
 
+
+extern s32 playTitleMusic(s16 arg1, s32 arg2);
+
+
 struct HudDisplay {
     /*0x00*/ s16 lives;
     /*0x02*/ s16 coins;

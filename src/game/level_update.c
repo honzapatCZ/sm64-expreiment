@@ -1042,6 +1042,29 @@ s32 play_mode_frame_advance(void) {
     return 0;
 }
 
+
+
+
+//CUSTOM
+s32 playTitleMusic(s16 arg1, UNUSED s32 arg2) {
+    s32 retVar;
+
+    play_sound(MUSIC_MARIO_PARASITE_TITLESCREEN, gDefaultSoundArgs);
+
+    return retVar;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Set the transition, which is a period of time after the warp is initiated
  * but before it actually occurs. If updateFunction is not NULL, it will be

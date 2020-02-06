@@ -155,6 +155,16 @@
             "release_rate": 208,
             "envelope": "envelope0",
             "sound": "1A"
+        },
+        "inst27": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1B_custom_titleScr"
+        },
+        "inst28": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "1C_custom_fileSel"
         }
     },
     "instrument_list": [
@@ -184,6 +194,8 @@
         "inst23",
         "inst24",
         "inst25",
-        "inst26"
+        "inst26",
+        "inst27",
+        "inst28"
     ]
 }

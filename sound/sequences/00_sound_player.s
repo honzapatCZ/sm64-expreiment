@@ -2061,6 +2061,33 @@ sound_ref .sound_mario_wah2
   sound_ref .sound_peach_for_mario
   sound_ref .sound_peach_mario2
 .endif
+sound_ref .music_mario_parasite_titleScreen
+sound_ref .music_mario_parasite_fileSelect
+
+.music_mario_parasite_titleScreen:
+chan_setbank 8
+chan_setinstr 27
+chan_setlayer 0, .layer_777A
+chan_setlayer 1, .layer_777A
+chan_end
+
+.layer_777A:
+layer_note1 39, 0x50, 127
+layer_end
+
+.music_mario_parasite_fileSelect:
+chan_setbank 8
+chan_setinstr 28
+chan_setlayer 0, .layer_777B
+chan_setlayer 1, .layer_777B
+
+chan_end
+
+.layer_777B:
+layer_note1 39, 0x50, 127
+layer_end
+
+
 
 .sound_mario_jump_hoo:
 chan_setbank 8

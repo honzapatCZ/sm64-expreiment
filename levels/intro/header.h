@@ -2,7 +2,6 @@
 #define INTRO_HEADER_H
 
 #include "types.h"
-
 // geo
 extern const GeoLayout intro_geo_0002D0[];
 extern const GeoLayout intro_geo_00035C[];
