@@ -6,7 +6,7 @@
 enum SeqId {
     SEQ_SOUND_PLAYER,                 // 0x00
     SEQ_EVENT_CUTSCENE_COLLECT_STAR,  // 0x01
-    SEQ_MENU_TITLE_SCREEN,            // 0x02
+    SEQ_MENU_TITLE_SCREEN_OLD,        // 0x02
     SEQ_LEVEL_GRASS,                  // 0x03
     SEQ_LEVEL_INSIDE_CASTLE,          // 0x04
     SEQ_LEVEL_WATER,                  // 0x05
@@ -37,8 +37,12 @@ enum SeqId {
     SEQ_EVENT_CUTSCENE_INTRO,         // 0x1E
     SEQ_EVENT_CUTSCENE_VICTORY,       // 0x1F
     SEQ_EVENT_CUTSCENE_ENDING,        // 0x20
-    SEQ_MENU_FILE_SELECT,             // 0x21
+    SEQ_MENU_FILE_SELECT_OLD,         // 0x21
     SEQ_EVENT_CUTSCENE_LAKITU,        // 0x22 (not in JP)
+    SEQ_MENU_TITLE_SCREEN,            // 0x23
+    SEQ_MENU_FILE_SELECT,             // 0x24
+    
+    
     SEQ_COUNT
 };
 

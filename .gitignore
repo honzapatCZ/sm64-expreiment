@@ -41,6 +41,7 @@
 # Text editor remnants
 *.swp
 .vscode/*
+.vs/
 
 # General project-specific ignores
 doxygen/doxygen/*

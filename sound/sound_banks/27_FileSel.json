@@ -1,0 +1,28 @@
+{
+    "date": "2020-02-06",
+    "sample_bank": "musicFileSel",
+    "envelopes": {
+        "envelope0": [
+            [2, 32700],
+            [1, 32700],
+            [32700, 29430],
+            "hang"
+        ]
+    },
+    "instruments": {
+        "inst0": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "00_custom_fileSel"
+        },
+        "inst1": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "00_custom_fileSel"
+        }
+    },
+    "instrument_list": [
+        "inst0",
+        "inst1"
+    ]
+}

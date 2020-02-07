@@ -208,9 +208,6 @@
 #define SOUND_PEACH_FOR_MARIO                   SOUND_ARG_LOAD(2, 4, 0x3E, 0xFF, 8)
 #define SOUND_PEACH_MARIO2                      SOUND_ARG_LOAD(2, 4, 0x3F, 0xFF, 8)
 
-#define MUSIC_MARIO_PARASITE_TITLESCREEN        SOUND_ARG_LOAD(2, 4, 0x40, 0xFF, 8)
-#define MUSIC_MARIO_PARASITE_FILESELECT         SOUND_ARG_LOAD(2, 4, 0x41, 0xFF, 8)
-
 
 
 /* General Sound Effects */
