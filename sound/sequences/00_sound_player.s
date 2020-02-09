@@ -7379,27 +7379,13 @@ layer_note1 51, 0x5, 73
 layer_end
 
 .sound_menu_coin_its_a_me_mario:
-chan_setbank 9
+chan_setbank 11
 chan_setinstr 3
-chan_setenvelope .envelope_3358
-chan_setvibratoextent 3
-chan_setvibratorate 60
-chan_setval 25
-chan_call .set_reverb
 chan_setlayer 0, .layer_2E28
-chan_setlayer 1, .layer_2E3D
-chan_setlayer 2, .layer_2E34
-chan_setval 70
-chan_call .delay
-chan_setbank 10
-chan_setinstr 8
 chan_end
 
 .layer_2E28:
-layer_call .layer_11E4
-layer_delay 0x12
-layer_transpose 0
-layer_note1 39, 0xc8, 120
+layer_note1 39, 0x2bc, 127
 layer_end
 
 .layer_2E34:

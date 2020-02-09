@@ -19,10 +19,16 @@
             "release_rate": 208,
             "envelope": "envelope0",
             "sound": "00_custom_titleScr"
+        },
+        "inst2": {
+            "release_rate": 208,
+            "envelope": "envelope0",
+            "sound": "07_custom_start_ding"
         }
     },
     "instrument_list": [
         "inst0",
-        "inst1"
+        "inst1",
+        "inst2"
     ]
 }

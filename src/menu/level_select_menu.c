@@ -185,9 +185,9 @@ int func_8016F444(void) {
     return run_press_start_demo_timer(sp1C);
 }
 
-int func_8016F4BC(void) {
+int func_8016F4BC(void) {//intro logo sound effect
     set_background_music(0, SEQ_SOUND_PLAYER, 0);
-    play_sound(SOUND_MENU_COIN_ITS_A_ME_MARIO, gDefaultSoundArgs);
+    play_sound(SOUND_MENU_COIN_ITS_A_ME_MARIO, gDefaultSoundArgs); //
     return 1;
 }
 

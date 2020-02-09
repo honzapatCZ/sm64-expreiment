@@ -27,7 +27,7 @@ const LevelScript level_intro_entry_1[] = {
     LOAD_MIO0(/*seg*/ 0x07, _intro_segment_7SegmentRomStart, _intro_segment_7SegmentRomEnd),
     ALLOC_LEVEL_POOL(),
 
-    AREA(/*index*/ 1, intro_geo_0002D0),
+    AREA(/*index*/ 1, intro_geo_IntroNin_0002D0),
     END_AREA(),
 
     FREE_LEVEL_POOL(),
@@ -54,7 +54,7 @@ const LevelScript level_intro_entry_2[] = {
                       _title_screen_bg_mio0SegmentRomEnd),
     ALLOC_LEVEL_POOL(),
 
-    AREA(/*index*/ 1, intro_geo_00035C), END_AREA(),
+    AREA(/*index*/ 1, intro_geo_MarioHead_00035C), END_AREA(),
 
     FREE_LEVEL_POOL(), SLEEP(/*frames*/ 2), BLACKOUT(/*active*/ FALSE), LOAD_AREA(/*area*/ 1),
     
@@ -78,7 +78,7 @@ const LevelScript level_intro_entry_3[] = {
     LOAD_MIO0_TEXTURE(/*seg*/ 0x0A, _title_screen_bg_mio0SegmentRomStart, _title_screen_bg_mio0SegmentRomEnd),
     ALLOC_LEVEL_POOL(),
 
-    AREA(/*index*/ 1, intro_geo_0003B8),
+    AREA(/*index*/ 1, intro_geo_GOver_0003B8),
     END_AREA(),
 
     FREE_LEVEL_POOL(),

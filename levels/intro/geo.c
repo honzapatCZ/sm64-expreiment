@@ -13,8 +13,8 @@
 
 #include "levels/intro/header.h"
 
-// 0x0E0002D0
-const GeoLayout intro_geo_0002D0[] = {
+// 0x0E0002D0 //Nin Logo
+const GeoLayout intro_geo_IntroNin_0002D0[] = {
    GEO_NODE_SCREEN_AREA(0, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
    GEO_OPEN_NODE(),
       GEO_ZBUFFER(0),
@@ -30,20 +30,21 @@ const GeoLayout intro_geo_0002D0[] = {
          GEO_OPEN_NODE(),
             GEO_CAMERA(0, 0, 0, 3200, 0, 0, 0, 0x00000000),
             GEO_OPEN_NODE(),
-               GEO_ASM(0, geo18_title_screen),
+               GEO_ASM(0, geo18_title_screen), //logo
             GEO_CLOSE_NODE(),
          GEO_CLOSE_NODE(),
+		 GEO_ASM(0, geo18_fade_transitionMain),
       GEO_CLOSE_NODE(),
       GEO_ZBUFFER(0),
       GEO_OPEN_NODE(),
-         GEO_ASM(0, geo18_fade_transition),
+         GEO_ASM(0, geo18_fade_transition), // Nintendo trademark
       GEO_CLOSE_NODE(),
    GEO_CLOSE_NODE(),
    GEO_END(),
 };
 
 // 0x0E00035C
-const GeoLayout intro_geo_00035C[] = {
+const GeoLayout intro_geo_MarioHead_00035C[] = {
    GEO_NODE_SCREEN_AREA(0, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
    GEO_OPEN_NODE(),
       GEO_ZBUFFER(0),
@@ -56,16 +57,16 @@ const GeoLayout intro_geo_00035C[] = {
       GEO_ZBUFFER(1),
       GEO_OPEN_NODE(),
          GEO_CAMERA_FRUSTUM(45, 128, 16384),
-         GEO_OPEN_NODE(),
-            GEO_ASM(2, geo_draw_mario_head_goddard),
-         GEO_CLOSE_NODE(),
+         //GEO_OPEN_NODE(),
+         //   GEO_ASM(2, geo_draw_mario_head_goddard),
+         //GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
    GEO_CLOSE_NODE(),
    GEO_END(),
 };
 
 // 0x0E0003B8
-const GeoLayout intro_geo_0003B8[] = {
+const GeoLayout intro_geo_GOver_0003B8[] = {
    GEO_NODE_SCREEN_AREA(0, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
    GEO_OPEN_NODE(),
       GEO_ZBUFFER(0),

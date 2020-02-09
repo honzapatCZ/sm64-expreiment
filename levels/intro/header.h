@@ -3,9 +3,9 @@
 
 #include "types.h"
 // geo
-extern const GeoLayout intro_geo_0002D0[];
-extern const GeoLayout intro_geo_00035C[];
-extern const GeoLayout intro_geo_0003B8[];
+extern const GeoLayout intro_geo_IntroNin_0002D0[];
+extern const GeoLayout intro_geo_MarioHead_00035C[];
+extern const GeoLayout intro_geo_GOver_0003B8[];
 extern const GeoLayout intro_geo_000414[];
 
 // leveldata

@@ -57,10 +57,9 @@ float introBackgroundOffsetY[] = {
 const u8 *const *introBackgroundTextureType[] = { mario_title_texture_table, game_over_texture_table };
 
 s8 introBackgroundIndexTable[] = {
-    INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,
-    INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,
-    INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,
-    INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,
+    INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, 
+	INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,  
+	INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO, INTRO_BACKGROUND_SUPER_MARIO,
 };
 
 // only one table of indexes listed
@@ -78,6 +77,7 @@ s8 gameOverBackgroundFlipOrder[] = { 0x00, 0x01, 0x02, 0x03, 0x07, 0x0B,
                                      0x0a, 0x09, 0x08, 0x04, 0x05, 0x06 };
 
 Gfx *geo18_title_screen(s32 sp50, struct GraphNode *sp54, UNUSED void *context) {
+    
     struct GraphNode *graphNode; // sp4c
     Gfx *displayList;            // sp48
     Gfx *displayListIter;        // sp44
@@ -119,15 +119,42 @@ Gfx *geo18_title_screen(s32 sp50, struct GraphNode *sp54, UNUSED void *context) 
         }
         guScale(scaleMat, scaleX, scaleY, scaleZ);
         gSPMatrix(displayListIter++, scaleMat, G_MTX_MODELVIEW | G_MTX_MUL | G_MTX_PUSH);
-        gSPDisplayList(displayListIter++, &intro_seg7_dl_0700B3A0);
+        //gSPDisplayList(displayListIter++, &intro_seg7_dl_0700B3A0); //SM+64 3d display
         gSPPopMatrix(displayListIter++, G_MTX_MODELVIEW);
         gSPEndDisplayList(displayListIter);
         gTitleZoomCounter++;
     }
+	
+
     return displayList;
 }
 
-Gfx *geo18_fade_transition(s32 sp40, struct GraphNode *sp44, UNUSED void *context) {
+Gfx *geo18_fade_transitionMain(s32 sp40, struct GraphNode *sp44, UNUSED void *context) { // Nintendo tdm
+    struct GraphNode *graphNode = sp44;                                              // sp3c
+    Gfx *displayList = NULL;                                                         // sp38
+    Gfx *displayListIter = NULL;                                                     // sp34
+    if (1 != 1) {
+        gTitleFadeCounter = 0; // D_801B985C
+    } else if (1 == 1) {
+        displayList = alloc_display_list(5 * sizeof(*displayList));
+        displayListIter = displayList;
+        gSPDisplayList(displayListIter++, dl_proj_mtx_fullscreen);
+        gDPSetEnvColor(displayListIter++, 255, 255, 255, gTitleFadeCounter);
+        graphNode->flags = (graphNode->flags & 0xFF) | 0x500;
+        gDPSetRenderMode(displayListIter++, G_RM_AA_XLU_SURF, G_RM_AA_XLU_SURF2);
+        gSPDisplayList(displayListIter++, &intro_seg7_dl_0700B3A0); // Nintendo Trademark
+        gSPEndDisplayList(displayListIter);
+        if (gTitleZoomCounter >= 0x13) {
+            gTitleFadeCounter += 0x1e;
+            if (gTitleFadeCounter >= 0x100) {
+                gTitleFadeCounter = 0xFF;
+            }
+        }
+    }
+    return displayList;
+}
+
+Gfx *geo18_fade_transition(s32 sp40, struct GraphNode *sp44, UNUSED void *context) { //Nintendo tdm
     struct GraphNode *graphNode = sp44; // sp3c
     Gfx *displayList = NULL;            // sp38
     Gfx *displayListIter = NULL;        // sp34
@@ -149,7 +176,7 @@ Gfx *geo18_fade_transition(s32 sp40, struct GraphNode *sp44, UNUSED void *contex
             if (0) {
             }
         }
-        gSPDisplayList(displayListIter++, &intro_seg7_dl_0700C6A0);
+        gSPDisplayList(displayListIter++, &intro_seg7_dl_0700C6A0); // Nintendo Trademark
         gSPEndDisplayList(displayListIter);
         if (gTitleZoomCounter >= 0x13) {
             gTitleFadeCounter += 0x1a;
