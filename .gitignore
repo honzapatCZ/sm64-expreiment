@@ -71,3 +71,15 @@ build/*
 !/sound/**/*custom*/**/*.aiff
 !/assets/**/*custom*.bin
 !/assets/**/*custom*/**/*.bin
+!/levels/**/*cst*.png
+!/levels/**/*cst*/**/*.png
+!/actors/**/*cst*.png
+!/actors/**/*cst*/**/*.png
+!/textures/**/*cst*.png
+!/textures/**/*cst*/**/*.png
+!/sound/**/*cst*.m64
+!/sound/**/*cst*/**/*.m64
+!/sound/**/*cst*.aiff
+!/sound/**/*cst*/**/*.aiff
+!/assets/**/*cst*.bin
+!/assets/**/*cst*/**/*.bin

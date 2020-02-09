@@ -3302,22 +3302,22 @@ static const Gfx intro_seg7_dl_0700ADC0[] = {
 
 
 ALIGNED8 static const u8 intro_logo_1[] = {
-#include "levels/intro/4_logo_1.rgba16.inc.c"
+#include "levels/intro/4_cst_logo_1.rgba16.inc.c"
 };
 ALIGNED8 static const u8 intro_logo_2[] = {
-#include "levels/intro/5_logo_2.rgba16.inc.c"
+#include "levels/intro/5_cst_logo_2.rgba16.inc.c"
 };
 ALIGNED8 static const u8 intro_logo_3[] = {
-#include "levels/intro/6_logo_3.rgba16.inc.c"
+#include "levels/intro/6_cst_logo_3.rgba16.inc.c"
 };
 ALIGNED8 static const u8 intro_logo_4[] = {
-#include "levels/intro/7_logo_4.rgba16.inc.c"
+#include "levels/intro/7_cst_logo_4.rgba16.inc.c"
 };
 ALIGNED8 static const u8 intro_logo_5[] = {
-#include "levels/intro/8_logo_5.rgba16.inc.c"
+#include "levels/intro/8_cst_logo_5.rgba16.inc.c"
 };
 ALIGNED8 static const u8 intro_logo_6[] = {
-#include "levels/intro/9_logo_6.rgba16.inc.c"
+#include "levels/intro/9_cst_logo_6.rgba16.inc.c"
 };
 
 static const Vtx intro_logo_vtx_5[] = {
