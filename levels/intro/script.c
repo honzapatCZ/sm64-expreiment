@@ -124,7 +124,7 @@ const LevelScript level_intro_entry_4[] = {
 
 // These should be static, but C doesn't allow non-sized forward declarations of static arrays
 
-const LevelScript script_intro_L1[] = {
+const LevelScript script_intro_L1[] = {//file_sel
     STOP_MUSIC(/*fadeOutTime*/ 0x00BE),
     TRANSITION(/*transType*/ WARP_TRANSITION_FADE_INTO_COLOR, /*time*/ 16, /*color*/ 0xFF, 0xFF, 0xFF),
     SLEEP(/*frames*/ 16),
@@ -134,7 +134,7 @@ const LevelScript script_intro_L1[] = {
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _menuSegmentRomStart, _menuSegmentRomEnd, level_main_menu_entry_1),
 };
 
-const LevelScript script_intro_L2[] = {
+const LevelScript script_intro_L2[] = {//debug_menu
     TRANSITION(/*transType*/ WARP_TRANSITION_FADE_INTO_COLOR, /*time*/ 16, /*color*/ 0xFF, 0xFF, 0xFF),
     SLEEP(/*frames*/ 16),
     CLEAR_LEVEL(),
@@ -142,7 +142,7 @@ const LevelScript script_intro_L2[] = {
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_4),
 };
 
-const LevelScript script_intro_L3[] = {
+const LevelScript script_intro_L3[] = {//
     STOP_MUSIC(/*fadeOutTime*/ 0x00BE),
     TRANSITION(/*transType*/ WARP_TRANSITION_FADE_INTO_COLOR, /*time*/ 16, /*color*/ 0xFF, 0xFF, 0xFF),
     SLEEP(/*frames*/ 16),

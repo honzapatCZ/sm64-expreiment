@@ -135,7 +135,7 @@ s16 level_select_input_loop(void) {
     return 0;
 }
 
-int func_8016F3CC(void) {
+int func_8016F3CC(void) {//mario head
     s32 sp1C = 0;
 
 #ifndef VERSION_JP
@@ -150,7 +150,7 @@ int func_8016F3CC(void) {
 #endif
     print_intro_text();
 
-    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+    if (gPlayer1Controller->buttonPressed) {
 #ifdef VERSION_JP
         play_sound(SOUND_MENU_STAR_SOUND, gDefaultSoundArgs);
         sp1C = 100 + gDebugLevelSelect;
@@ -196,10 +196,10 @@ s32 LevelProc_8016F508(s16 arg1, UNUSED s32 arg2) {
 
     switch (arg1) {
         case 0:
-            retVar = func_8016F4BC();
+            retVar = func_8016F4BC();//nin logo
             break;
         case 1:
-            retVar = func_8016F3CC();
+            retVar = func_8016F3CC();//mario head
             break;
         case 2:
             retVar = func_8016F444();
